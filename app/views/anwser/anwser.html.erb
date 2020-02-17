@@ -1,0 +1,13 @@
+<h1> this is the anwser page <h2>
+<h2><%=@quest%></h2>
+
+
+<% if @quest ==  "I am going to work" %>
+  <p><%="Great!"%><p>
+<% elsif @quest.match(/.*[?]/)%>
+  <p><%="Silly question, get dressed and go to work!"%></p>
+<% else %>
+  <p><%="I don't care, get dressed and go to work!"%></p>
+<% end %>
+
+<%= link_to "Ask another question", ask_path %>
